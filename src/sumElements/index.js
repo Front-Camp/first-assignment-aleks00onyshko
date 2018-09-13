@@ -11,7 +11,9 @@
  * sumElements([Infinity, NaN, 1]); // 1
  */
 const sumElements = arr => {
-  /* your logic here...*/
-};
+  return arr.filter( el => !isNaN(Number(el)) && isFinite(el)).reduce((accum, currValue) =>  accum + currValue)
+}
+
+
 
 export default sumElements;
