@@ -10,6 +10,8 @@
 * sum(-1, 13); // 12
 */
 const sum = (a, b) => {
+  if(isFinite(a, b)) throw new Error('One of the numbers is NaN or Infinity')
+  else if(typeof a === 'string' || typeof b === 'string') throw new Error('One of the numbers is string')
   return a + b;
 };
 
